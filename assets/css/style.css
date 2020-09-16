@@ -1,0 +1,50 @@
+#search {
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#submit {
+    margin-left: 10px;
+}
+
+#poster {
+    margin-top: 20px;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+#poster img {
+    align-items: center;
+}
+
+#description-container {
+    margin-top: 20px;
+}
+
+#description {
+    padding: 10px;
+}
+
+#rating-container {
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+#game-finder {
+    text-align: center;
+    margin: 20px;
+}
+
+#grub-finder {
+    text-align: center;
+    margin: 20px;
+}
+
+#reviews {
+    margin: 20px;
+    text-align: center;
+}
