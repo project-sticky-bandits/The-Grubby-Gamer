@@ -35,8 +35,12 @@ input {
     margin-top: 20px;
 }
 
+#game-title {
+    padding-left: 10px;
+}
+
 #description {
-    padding: 10px;
+    padding-left: 10px;
 }
 
 #rating-container {
