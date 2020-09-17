@@ -1,0 +1,66 @@
+body {
+    background-color: rgb(255, 217, 0);
+}
+
+#search {
+    display: flex;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#game-search {
+    margin-left: 20px;
+}
+
+input {
+    margin-left: 20px;
+}
+
+#submit {
+    margin-left: 10px;
+}
+
+#poster {
+    margin-top: 20px;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+#poster img {
+    align-items: center;
+}
+
+#description-container {
+    margin-top: 20px;
+}
+
+#game-title {
+    padding-left: 10px;
+}
+
+#description {
+    padding-left: 10px;
+}
+
+#rating-container {
+    margin-right: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+#game-finder {
+    text-align: center;
+    margin: 20px;
+}
+
+#grub-finder {
+    text-align: center;
+    margin: 20px;
+}
+
+#reviews {
+    margin: 20px;
+    text-align: center;
+}

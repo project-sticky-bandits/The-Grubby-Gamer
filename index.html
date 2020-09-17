@@ -1,14 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Grubby Gamer</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 </head>
+
 <body>
-    
-    
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="./assets/images/Grubby-Logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Home
+                </a>
+
+                <a class="navbar-item">
+                    Documentation
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            About
+                        </a>
+                        <a class="navbar-item">
+                            Jobs
+                        </a>
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Report an issue
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-warning">
+                            <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                            Log in
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="columns">
+        <div class="column is-one-third" id="search">
+            <input class="input is-rounded" type="text" id="game-search" placeholder="Enter Game Name">
+            <button class="button is-primary" id="submit">Submit</button>
+        </div>
+    </div>
+
+    <div class="columns is-gapless">
+        <div class="column is-one-third" id="poster">
+            <a href="https://placeholder.com"><img src="https://via.placeholder.com/500" alt="Game Poster"></a>
+        </div>
+        <div class="column is-one-third" id="description-container">
+            <h1 class="title is-1" id="game-title">Game Title</h1>
+            <p id="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, magnam officiis
+                esse in
+                vero labore, atque dignissimos ipsa quis necessitatibus delectus eaque minima! Consectetur magnam
+                provident voluptates quam rerum laudantium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptates quia dolorum explicabo consequatur voluptatibus nemo ratione natus. Quas corrupti beatae ut deleniti nemo? Quo ipsum doloribus provident quos ducimus.</p>
+        </div>
+        <div class="column is-one-third" id="rating-container">
+            <h1 class="title">Overall Rating</h1>
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/100" alt="Game Poster"></a> 
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column" id="reviews">
+            <h1 class="title">Reviews</h1>
+        </div>
+    </div>
+
+    <div class="columns">
+        <div class="column" id="game-finder">
+            <h1 class="title is-4">Get Your Games</h1>
+        </div>
+        <div class="column" id="grub-finder">
+            <h1 class="title is-4">Get Your Grub</h1>
+        </div>
+    </div>
+
+
+
+
+
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
