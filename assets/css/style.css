@@ -64,3 +64,11 @@ input {
     margin: 20px;
     text-align: center;
 }
+
+#store-dropdown {
+    text-align: center;
+}
+
+#store-map {
+    text-align: center;
+}
