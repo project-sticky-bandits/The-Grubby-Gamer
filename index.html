@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <nav class="navbar is is-primary" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
                 <img src="./assets/images/Grubby-Logo.png" width="112" height="28">
@@ -60,10 +60,15 @@
                 Odio voluptates quia dolorum explicabo consequatur voluptatibus nemo ratione natus. Quas corrupti beatae
                 ut deleniti nemo? Quo ipsum doloribus provident quos ducimus.</p>
         </div>
-        <div class="column is-one-third" id="rating-container">
-            <h1 class="title">Overall Rating</h1>
-            <h3><a id="metacritic">Metacritic: <span id="meta-rating"></span></a></h3>
-            <h3">Overall: <span id="overall-rating"></span></h3>
+        <div class="column is-one-third">
+            <div id="rating-container">
+                <h1 class="title">Overall Rating</h1>
+                <h3><a id="metacritic">Metacritic: <span id="meta-rating"></span></a></h3>
+                <h3">Overall: <span id="overall-rating"></span></h3>
+            </div>
+            <div id="gg-icon">
+                <img src="./assets/images/Untitled design.png" alt="Game consol with pizza">
+            </div>
         </div>
     </div>
 
@@ -76,9 +81,29 @@
     <div class="columns is-centered">
         <div class="column is-one-third" id="game-finder">
             <h1 class="title is-4">Find your grub, get your games.</h1>
-            <div class="">
-                <input class="input is-rounded" type="text" id="search" placeholder="Search">
-                <button class="button is-primary" id="submit2">Submit</button>
+            <div class="select is-rounded is-primary">
+                <select>
+                    <option selected disabled>Shop Grub</option>
+                    <option value="taco-bell">Taco Bell</option>
+                    <option value="mcdonalds">McDonald's</option>
+                    <option value="burger-king">Burger King</option>
+                    <option value="kfc">KFC</option>
+                    <option value="wendy's">Wendy's</option>
+                    <option value="popeyes">Popeyes</option>
+                    <option value="arbys">Arby's</option>
+                </select>
+            </div>
+            <h1 class="title is-2">or</h1>
+            <div class="select is-rounded is-primary">
+                <select>
+                    <option selected disabled>Shop Games</option>
+                    <option value="gamestop">Gamestop</option>
+                    <option value="best-buy">Best Buy</option>
+                    <option value="target">Target</option>
+                    <option value="walmart">Walmart</option>
+                    <option value="the-great-escape">The Great Escape</option>
+                    <option value="eb-games">EB Games</option>
+                </select>
             </div>
         </div>
     </div>

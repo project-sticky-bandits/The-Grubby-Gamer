@@ -12,6 +12,7 @@ gameDesc.text("Once you search for a game up in the top right corner, we'll disp
 gamePoster.hide();
 gameRatingContainer.hide();
 
+
 $("#submit").click(function () {
     if (gameSearch.val() != "") {
         displayGame()
