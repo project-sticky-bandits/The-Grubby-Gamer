@@ -1,5 +1,6 @@
 body {
     background-color: rgb(255, 217, 0);
+    height: 100%;
 }
 
 #search {
@@ -15,10 +16,15 @@ body {
 
 input {
     margin-left: 20px;
+    display: flex;
 }
 
 #submit {
     margin-left: 10px;
+}
+
+#submit2 {
+    margin-top: 2em;
 }
 
 #poster {
@@ -72,3 +78,19 @@ input {
 #store-map {
     text-align: center;
 }
+
+#poster img {
+    border-radius: 10%;
+}
+
+#games-map {
+    height: 400px;
+    width: auto;
+    margin-right: 2em;
+    margin-left: 2em;
+    border: solid;
+}
+
+#game-finder {
+    text-align: center;
+ }
