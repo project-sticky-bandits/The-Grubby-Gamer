@@ -213,4 +213,3 @@ function callback(results, status) {
       
     
   }
-}
