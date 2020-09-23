@@ -8,6 +8,9 @@
 
 * Want some food to go with that video game? Select a fast-food restaurant from the menu and Google Maps will show you the nearest fast-food restaurant. 
 
+## Screenshot
+![](2020-09-23-16-22-32.png)
+
 ## Contributors
 
 * Sydney Porter

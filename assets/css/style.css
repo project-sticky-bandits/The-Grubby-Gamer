@@ -75,6 +75,7 @@ input {
     margin-right: 2em;
     margin-left: 2em;
     border: solid;
+    border-color: rgb(124, 101, 185);
 }
 
 div #gg-icon {
