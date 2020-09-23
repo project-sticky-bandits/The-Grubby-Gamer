@@ -10,7 +10,7 @@
 
 ## Contributors
 
-* Sydney 
+* Sydney Porter
 * AJ
 * Forrest
 
