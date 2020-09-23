@@ -42,7 +42,7 @@ function addSearchHistoryItem(game) {
     console.log(game);
 }
 
-document.querySelector(".navbar-item").addEventListener("click", function(event){
+document.querySelector(".navbar-item").addEventListener("click", function (event) {
 
 });
 
