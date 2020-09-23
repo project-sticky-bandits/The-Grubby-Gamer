@@ -12,23 +12,85 @@ gameDesc.text("Once you search for a game up in the top right corner, we'll disp
 gamePoster.hide();
 gameRatingContainer.hide();
 
+var loadPage = function () {
+    var gameValue = localStorage.getItem("game");
+
+    if (gameValue !== null) {
+        gameArray = JSON.parse(gameValue);
+
+        for (i = 0; i < gameArray.length; i++) {
+            var searchedGame = gameArray[i];
+            console.log(searchedGame);
+            addSearchHistoryItem(searchedGame);
+        }
+    }
+}
+
+loadPage();
+
+//Add search hitory to page an make clickable 
+function addSearchHistoryItem(game) {
+    var history = document.createElement("a");
+    history.setAttribute("class", "navbar-item");
+    history.innerHTML = game;
+    var searched = document.querySelector("#searched");
+    searched.appendChild(history);
+    history.addEventListener("click", () => {
+        displayGame(event.target.textContent);
+        console.log(event.target.textContent);
+    });
+    console.log(game);
+}
+
+document.querySelector(".navbar-item").addEventListener("click", function(event){
+
+});
+
+
+function addSearchHistory(game) {
+    var getGame = localStorage.getItem("game");
+    var gameArray = [];
+
+    // if get city is empty, make new array of city
+    if (getGame == null) {
+        gameArray.unshift(game);
+    } else {
+        gameArray = JSON.parse(getGame);
+        gameArray.push(game);
+    }
+
+    // if it's not empty
+    var gameString = JSON.stringify(gameArray);
+
+    localStorage.setItem("game", gameString);
+    addSearchHistoryItem(game);
+}
+
+function handleSearchEvent() {
+    var input = document.querySelector("input").value;
+    // console.log(input);
+    displayGame(input);
+    addSearchHistory(input);
+    addSearchHistoryItem(input);
+}
+
 
 $("#submit").click(function () {
     if (gameSearch.val() != "") {
-        displayGame()
+        handleSearchEvent();
     }
 
 })
 
-function displayGame() {
-    var searchTerm = gameSearch.val().replace(' ', '-');
-    $.ajax(`https://api.rawg.io/api/games?search=banjo-kazooiehttps://api.rawg.io/api/games?search=${searchTerm}`)
+function displayGame(game) {
+    // var searchTerm = gameSearch.val().replace(' ', '-');
+    $.ajax(`https://api.rawg.io/api/games?search=banjo-kazooiehttps://api.rawg.io/api/games?search=${game}`)
         .then(function (result) {
-            console.log(result)
+            // console.log(result)
             return $.ajax(`https://api.rawg.io/api/games/${result.results[0].id}`)
         })
         .then(function (result) {
-            console.log(result)
+            // console.log(result)
 
             //name/desc
             gameTitle.text(result.name)
@@ -82,3 +144,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(gamesMap);
 }
+
