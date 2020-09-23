@@ -77,6 +77,10 @@ input {
     border: solid;
 }
 
+div #gg-icon {
+    text-align: center;
+}
+
  #gg-icon img {
     height: 400px;
     width: auto;
