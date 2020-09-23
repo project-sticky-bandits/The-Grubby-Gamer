@@ -224,13 +224,3 @@ $(document).ready(function() {
     });
   });
 
-
-    if (status == google.maps.places.PlacesServiceStatus.OK) {
-
-        createMarker(results);
-
-
-    }
-
-}
-
