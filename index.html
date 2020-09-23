@@ -29,6 +29,14 @@
                 <a class="navbar-item" href="./index.html">
                     Home
                 </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                      Search History
+                    </a>
+            
+                    <div class="navbar-dropdown" id="searched">
+                    </div>
+                  </div>
                 <a class="navbar-item" href="#game-finder">
                     Get Games
                 </a>
@@ -71,42 +79,7 @@
             </div>
         </div>
     </div>
-
-    <div class="columns">
-        <div class="column" id="reviews">
-            <h1 class="title">Reviews</h1>
-        </div>
-    </div>
-
-    <div class="columns is-centered">
-        <div class="column is-one-third" id="game-finder">
-            <h1 class="title is-4">Find your grub, get your games.</h1>
-            <div class="select is-rounded is-primary">
-                <select>
-                    <option selected disabled>Shop Grub</option>
-                    <option value="taco-bell">Taco Bell</option>
-                    <option value="mcdonalds">McDonald's</option>
-                    <option value="burger-king">Burger King</option>
-                    <option value="kfc">KFC</option>
-                    <option value="wendy's">Wendy's</option>
-                    <option value="popeyes">Popeyes</option>
-                    <option value="arbys">Arby's</option>
-                </select>
-            </div>
-            <h1 class="title is-2">or</h1>
-            <div class="select is-rounded is-primary">
-                <select>
-                    <option selected disabled>Shop Games</option>
-                    <option value="gamestop">Gamestop</option>
-                    <option value="best-buy">Best Buy</option>
-                    <option value="target">Target</option>
-                    <option value="walmart">Walmart</option>
-                    <option value="the-great-escape">The Great Escape</option>
-                    <option value="eb-games">EB Games</option>
-                </select>
-            </div>
-        </div>
-    </div>
+    
     <div class="columns">
         <div class="column">
             <div id="games-map"></div>
