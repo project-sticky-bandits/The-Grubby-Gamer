@@ -9,6 +9,7 @@ const gamePoster = $("#poster");
 var map;
 var service;
 var infoWindow;
+var marker;
 
 gameTitle.text("Search for a game dude!");
 gameDesc.text("Once you search for a game up in the top right corner, we'll display the information for it down here, including the summary, average rating, and the cover art!");
@@ -51,8 +52,9 @@ function displayGame() {
 }
 
 function initialize() {
-  infoWindow = new google.maps.InfoWindow;
+    infoWindow = new google.maps.InfoWindow;
 
+    
   if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             var pos = {
@@ -75,9 +77,11 @@ function initialize() {
             service.nearbySearch(request, callback);
             
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('location found');
             infoWindow.open(map);
             map.setCenter(pos);
+
+            
 
         }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
@@ -92,7 +96,9 @@ function initialize() {
 
 function createMarker(places) {
     var bounds = new google.maps.LatLngBounds();
-    var placesList = document.getElementById('places');
+    
+    // var placesList = document.getElementById('places');
+    
   
     for (var i = 0, place; place = places[i]; i++) {
       var image = {
@@ -102,20 +108,29 @@ function createMarker(places) {
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
       };
+      
   
-      var marker = new google.maps.Marker({
+      marker = new google.maps.Marker({
         map: map,
         icon: image,
         title: place.name,
+        animation: google.maps.Animation.DROP,
         position: place.geometry.location
       });
-  
+
+      marker = addEventListener("click", bounds);
+      console.log(places[i].name)
+      this.infoWindow.content = places[i].name;
+
+
+      
+      
     
-  
       bounds.extend(place.geometry.location);
     }
     map.fitBounds(bounds);
 }
+
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.setPosition(pos);
