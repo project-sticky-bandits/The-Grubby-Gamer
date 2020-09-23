@@ -75,7 +75,6 @@ function handleSearchEvent() {
     // console.log(input);
     displayGame(input);
     addSearchHistory(input);
-    addSearchHistoryItem(input);
 }
 
 
