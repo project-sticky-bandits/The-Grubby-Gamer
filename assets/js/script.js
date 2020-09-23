@@ -53,7 +53,6 @@ function displayGame() {
 
 function initialize() {
     infoWindow = new google.maps.InfoWindow;
-
     
   if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -97,9 +96,6 @@ function initialize() {
 function createMarker(places) {
     var bounds = new google.maps.LatLngBounds();
     
-    // var placesList = document.getElementById('places');
-    
-  
     for (var i = 0, place; place = places[i]; i++) {
       var image = {
         url: place.icon,
@@ -118,10 +114,15 @@ function createMarker(places) {
         position: place.geometry.location
       });
 
-      marker = addEventListener("click", bounds);
-      console.log(places[i].name)
-      this.infoWindow.content = places[i].name;
-
+      
+      var infowindow = new google.maps.InfoWindow({
+          content: places[i].name
+      });
+      // console.log(places[i].name)
+      
+      marker.addListener("click", function() {
+          infowindow.open(marker.get("map"), marker);
+      });
 
       
       
@@ -129,6 +130,7 @@ function createMarker(places) {
       bounds.extend(place.geometry.location);
     }
     map.fitBounds(bounds);
+    
 }
 
 
@@ -149,5 +151,7 @@ function callback(results, status) {
     
   }
 }
+
+
 
 
