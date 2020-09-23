@@ -220,6 +220,5 @@ function callback(results, status) {
 
 
     infoWindow.open(gamesMap);
-}
 
 
