@@ -11,6 +11,9 @@
 ## Screenshot
 ![](2020-09-23-16-22-32.png)
 
+## Check it out!
+https://project-sticky-bandits.github.io/The-Grubby-Gamer/
+
 ## Contributors
 
 * Sydney Porter
